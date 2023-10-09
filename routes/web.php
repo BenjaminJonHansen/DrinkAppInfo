@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CocktailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CocktailController::class, 'index']);
+Route::get('/dumb', [CocktailController::class, 'dumb']);
+Route::post('/search', [CocktailController::class, 'search']);
