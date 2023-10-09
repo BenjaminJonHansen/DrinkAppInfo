@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CocktailController;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Counter;
+use App\Livewire\CocktailSearch;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [CocktailController::class, 'index']);
 Route::get('/dumb', [CocktailController::class, 'dumb']);
 Route::post('/search', [CocktailController::class, 'search']);
+
+ 
+Route::get('/counter', Counter::class);
+Route::get('/hej', CocktailSearch::class);
